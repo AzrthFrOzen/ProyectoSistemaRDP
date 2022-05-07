@@ -2,10 +2,17 @@
 
 namespace App\Controllers;
 
-class HomeController
+use Controller;
+
+class HomeController extends Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+    
     public function index()
     {
-        echo "Pagina de Inicio!";
+        require_once $this->ruta;
     }
 }

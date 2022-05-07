@@ -1,6 +1,6 @@
 <?php
 
-use App\Controllers\HomeController;
+namespace Libs;
 
 class Core
 {
@@ -12,17 +12,17 @@ class Core
 
         if (empty($url[0])) {
             require_once '../app/controllers/homeController.php'; //Ruta del controlador principal, colocar nombre
-            $controller = new HomeController(); //Colocar el controlador principal
+            $controller = new \App\Controllers\HomeController(); //Colocar el controlador principal
             $controller->index();
             return false;
         }
-
         $file_controller = '../app/controllers/' . $url[0] . 'Controller.php';
 
         if (file_exists($file_controller)) {
             require_once $file_controller;
-            $controller = $url[0] . 'Controller';
-            $controller = new $controller();
+            $controller_name = '\\app\\controllers\\' . $url[0] . 'Controller';
+            $controller = new $controller_name();
+            
             $size = sizeof($url);
             if ($size >= 2) {
                 if (method_exists($controller, $url[1])) {
@@ -44,6 +44,6 @@ class Core
         } else {
             echo "No existe el archivo controlador";
         }
-        myEcho($url);
+        myEcho($file_controller);
     }
 }
