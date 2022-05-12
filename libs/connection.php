@@ -1,4 +1,5 @@
 <?php
+
 class Connection
 {
     private $pdo;

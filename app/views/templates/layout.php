@@ -14,7 +14,7 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/ProyectoSistemaRDP/public/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -34,7 +34,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="../../../public/css/dashboard.css" rel="stylesheet">
+    <link href="<?= URL ?>public/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
             </nav>
 -->
             <!-- Contenído de la página -->
-            <?php require_once "../../views/{$pagina}" . ".php" ?>
+            
             <!--
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">

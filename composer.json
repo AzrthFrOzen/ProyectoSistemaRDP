@@ -1,0 +1,24 @@
+{
+    "name": "aesg/proyectodistemardp",
+    "description": "Software de gestión de trámites administrativos",
+    "type": "project",
+    "license": "propietary",
+    "authors": [
+        {
+            "name": "AESG",
+            "email": "abraham_esg@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Libs\\":"libs/",
+            "App\\Controllers\\":"app/controllers/"
+        },
+        "files": [
+            "app/helpers/helpers.php"
+        ]
+    },
+    "require": {
+        "jenssegers/blade": "^1.4"
+    }
+}

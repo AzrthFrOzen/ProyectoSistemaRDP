@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Controller;
 
-class HomeController extends Controller
+class HomeController extends \Libs\Controller
 {
     public function __construct()
     {
@@ -13,6 +13,7 @@ class HomeController extends Controller
     
     public function index()
     {
+        echo "Hola Mundo!!!";
         require_once $this->ruta;
     }
 }
