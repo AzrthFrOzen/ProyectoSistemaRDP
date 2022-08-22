@@ -1,19 +1,18 @@
 <?php
 
 namespace App\Controllers;
+use Libs\Controller;
 
-use Controller;
-
-class HomeController extends \Libs\Controller
+class HomeController extends Controller
 {
     public function __construct()
     {
         parent::__construct();
+        $this->loadBlade();
     }
     
     public function index()
     {
-        echo "Hola Mundo!!!";
-        require_once $this->ruta;
+        echo $this->blade->make('home.index', ['name' => 'Abraham'])->render();
     }
 }

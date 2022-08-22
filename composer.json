@@ -12,13 +12,16 @@
     "autoload": {
         "psr-4": {
             "Libs\\":"libs/",
-            "App\\Controllers\\":"app/controllers/"
+            "App\\":"app/"
         },
         "files": [
             "app/helpers/helpers.php"
         ]
     },
     "require": {
-        "jenssegers/blade": "^1.4"
+        "jenssegers/blade": "^1.4",
+        "vlucas/phpdotenv": "^5.4.1",
+        "illuminate/database": "*",
+        "php-di/php-di": "^6.4"
     }
 }
